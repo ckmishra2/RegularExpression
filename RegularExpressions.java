@@ -12,13 +12,13 @@ public class RegularExpressions {
 		Matcher emailM = emailP.matcher("abc.chandrakala@bl.co.us");
 		Pattern mobileP = Pattern.compile("[0-9]{0,2}[1-9] [0-9]{10}");//for mobile format
 		Matcher mobileM = mobileP.matcher("91 8976544391");
-		Pattern passwordP = Pattern.compile("[a-zA-Z]{8,}");//for Password
+		Pattern passwordP = Pattern.compile("^[A-Za-z]{8,}");//for Password atleast one in uppercase
 		Matcher passwordM = passwordP.matcher("Abcretut");
 		System.out.println("string matches the given Regex for first name -" + first.matches());
 		System.out.println("string matches the given Regex for last name -" + last.matches());
 		System.out.println("string matches the given Regex for email -" +  emailM.matches());
 		System.out.println("string matches the given Regex for mobile number -" +  mobileM.matches());
-		System.out.println("string matches the given Regex for mobile number -" +  passwordM.matches());
+		System.out.println("string matches the given Regex for Password -" +  passwordM.matches());
 		
 	}
 }
